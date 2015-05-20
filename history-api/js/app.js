@@ -1,5 +1,6 @@
 $(function(){
     var request = null;
+    var BASE_PATH = '/history-api/data/';
     //ページャーをクリックした時
     $(document).on('click', '#pager a', function(e){
         e.preventDefault();
@@ -12,7 +13,7 @@ $(function(){
         }
         history.pushState(null, null, page);
         changePager(this);
-        loadingData('/history-api/data/' + page);
+        loadingData(BASE_PATH + page);
     });
 
     //戻る・進むボタンがクリックされた時
@@ -24,7 +25,7 @@ $(function(){
                 changePager(this);
             }
         });
-        loadingData('/data/' + page);
+        loadingData(BASE_PATH + page);
     });
 
     //ページャーを変更する
