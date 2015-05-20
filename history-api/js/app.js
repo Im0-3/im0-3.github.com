@@ -12,7 +12,7 @@ $(function(){
         }
         history.pushState(null, null, page);
         changePager(this);
-        loadingData('/data/' + page);
+        loadingData('/history-api/data/' + page);
     });
 
     //戻る・進むボタンがクリックされた時
