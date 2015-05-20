@@ -1,0 +1,38 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+.photo {
+    width: 600px;
+}
+.pager {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+}
+.pager-num {
+    display: table-cell;
+    list-style: none;
+    font-size: 14px;
+    line-height: 3;
+}
+.pager-num a {
+    display: block;
+    color: #fff;
+    background: #ccc;
+    text-decoration: none;
+}
+
+.pager-num a:hover {
+  background: #aaa;
+}
+.pager-num .is-current {
+    background: #999 !important;
+}
