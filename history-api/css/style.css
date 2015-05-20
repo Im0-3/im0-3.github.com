@@ -10,6 +10,8 @@ img {
 }
 .photo {
     width: 600px;
+    height: 400px;
+    background: #eee;
 }
 .pager {
     display: table;
