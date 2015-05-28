@@ -1,37 +1,54 @@
 $(function(){
-    var request = null;
     var BASE_PATH = '/history-api/data/';
+    var request = null;
+    var $pager = $('#pager').find('a');
+
     //ページャーをクリックした時
-    $(document).on('click', '#pager a', function(e){
+    $pager.on('click', clickHandler);
+    //戻る・進むボタンがクリックされた時
+    $(window).on('popstate', popstateHandler);
+
+    //クリックした際に実行される関数
+    function clickHandler(e){
         e.preventDefault();
-        var page = $(this).attr('href');
-        if(page === location.pathname.replace('/', '')){
+        var self = this;
+        var page = $(self).attr('href');
+        var currentPage = getCurrentPage();
+        //クリックしたリンク先のURLと現在のURLが一致する場合は処理を終える
+        if(page === currentPage){
             return;
         }
-        if(request){
-	        request.abort();
-        }
+        //履歴の追加
         history.pushState(null, null, page);
-        changePager(this);
+        //ページャーの変更
+        changePager.apply(self);
+        //データをロードする
         loadingData(BASE_PATH + page);
-    });
+    }
 
-    //戻る・進むボタンがクリックされた時
-    $(window).on('popstate', function(e){
+    //戻る・進むボタンがクリックされた時に実行される関数
+    function popstateHandler(e){
         e.preventDefault();
-        var page = location.href.split('/').pop();
-        $('#pager .page-num a').each(function(){
-            if(page === $(this).attr('href')){
-                changePager(this);
+        var currentPage = getCurrentPage();
+        $pager.each(function(){
+            var self = this;
+            var page = $(self).attr('href');
+            if(page === currentPage){
+                changePager.apply(self);
             }
         });
-        loadingData(BASE_PATH + page);
-    });
+        loadingData(BASE_PATH + currentPage);
+    }
+
+    //現在のページ名を取得する
+    function getCurrentPage(){
+      return location.pathname.split('/').pop();
+    }
 
     //ページャーを変更する
-    function changePager(element){
-		$('#pager a').removeClass('is-current');
-        $(element).addClass('is-current');
+    function changePager(){
+      $pager.removeClass('is-current');
+        $(this).addClass('is-current');
     }
 
     //データを取得する
