@@ -26,10 +26,16 @@ $(function(){
         loadingData(BASE_PATH + page);
     }
 
+    //現在のページ名を取得する
+    function getCurrentPage(){
+      return location.pathname.split('/').pop();
+    }
+
     //戻る・進むボタンがクリックされた時に実行される関数
     function popstateHandler(e){
         e.preventDefault();
         var currentPage = getCurrentPage();
+        //ページャーの変更
         $pager.each(function(){
             var self = this;
             var page = $(self).attr('href');
@@ -37,12 +43,8 @@ $(function(){
                 changePager.apply(self);
             }
         });
+        //データをロードする
         loadingData(BASE_PATH + currentPage);
-    }
-
-    //現在のページ名を取得する
-    function getCurrentPage(){
-      return location.pathname.split('/').pop();
     }
 
     //ページャーを変更する
@@ -53,9 +55,11 @@ $(function(){
 
     //データを取得する
     function loadingData(url){
+        //requestを確認してはabort
         if(request){
             request.abort();
         }
+        //データのロード
         request = $.ajax({
            type: 'GET',
            dataType: 'html',
