@@ -31,7 +31,7 @@ $(function(){
 
   //replaceState()を実行する
   function runReplaceState(){
-    history.replaceState(null, null, '#push');
+    history.replaceState(null, null, '#replace');
     return 'replaceState()';
   }
 
