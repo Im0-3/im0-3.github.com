@@ -3,100 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular material Layout Demo</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/angular-material.css">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>layout="row"</h1>
-        <div layout="row">
-            <div>Column A</div>
-            <div>Column B</div>
-            <div>Column C</div>
+        <div class="section">
+            <h2>layout="row"</h2>
+            <div layout="row">
+                <div>flex item</div>
+                <div>flex item</div>
+                <div>flex item</div>
+            </div>
         </div>
-        <h1>layout="column"</h1>
+        <h2>layout="column"</h2>
         <div layout="column">
-            <div>Column A</div>
-            <div>Column B</div>
-            <div>Column C</div>
+            <div>flex item</div>
+            <div>flex item</div>
+            <div>flex item</div>
         </div>
-        <h1>flex</h1>
+        <h2>flex</h2>
         <div layout="row">
-            <div flex>Column A</div>
-            <div flex>Column B</div>
-            <div flex>Column C</div>
+            <div flex>flex item</div>
+            <div flex>flex item</div>
+            <div flex>flex item</div>
         </div>
-        <h1>flex サイズ指定</h1>
+        <h2>flex サイズ指定</h2>
         <div layout="row">
-            <div flex="20">Column A: 20</div>
-            <div flex="50">Column B: 50</div>
-            <div flex="30">Column C: 30</div>
+            <div flex="20">flex item: 20</div>
+            <div flex="50">flex item: 50</div>
+            <div flex="30">flex item: 30</div>
         </div>
-        <h1>flex サイズの総数が100を超えるとき</h1>
+        <h2>flex サイズの総数が100を超えるとき</h2>
         <div layout="row">
-            <div flex flex-order="1">Column A: 20</div>
-            <div flex>Column B: 50</div>
-            <div flex>Column C: 30</div>
+            <div flex="40">flex item: 40</div>
+            <div flex="50">flex item: 50</div>
+            <div flex="30">flex item: 30</div>
         </div>
-        <h1>flex サイズの総数が100を超えるとき(layout-wrapを追加)</h1>
+        <h2>flex サイズの総数が100を超えるとき(layout-wrapを追加)</h2>
         <div layout="row" layout-wrap>
-            <div flex="40">Column A: 20</div>
-            <div flex="50">Column B: 50</div>
-            <div flex="30">Column C: 30</div>
+            <div flex="40">flex item: 40</div>
+            <div flex="50">flex item: 50</div>
+            <div flex="30">flex item: 30</div>
         </div>
-        <h1>flex-order</h1>
+        <h2>flex-order</h2>
         <div layout="row">
-            <div flex flex-order="3">Column A: flex-order="3"</div>
-            <div flex flex-order="1">Column B: flex-order="1"</div>
-            <div flex flex-order="2">Column C: flex-order="2"</div>
+            <div flex flex-order="3">flex item: flex-order="3"</div>
+            <div flex flex-order="1">flex item: flex-order="1"</div>
+            <div flex flex-order="2">flex item: flex-order="2"</div>
         </div>
-        <h1>flex-order</h1>
+        <h2>flex-order</h2>
         <div layout="row">
-            <div flex flex-order="3">Column A: flex-order="3"</div>
-            <div flex flex-order="1">Column B: flex-order="1"</div>
-            <div flex flex-order="2">Column C: flex-order="2"</div>
+            <div flex flex-order="3">flex item: flex-order="3"</div>
+            <div flex flex-order="1">flex item: flex-order="1"</div>
+            <div flex flex-order="2">flex item: flex-order="2"</div>
         </div>
-        <h1>flex-margin</h1>
+        <h2>flex-margin</h2>
         <div layout="row" layout-margin>
-            <div flex flex-order="3">Column A: flex-order="3"</div>
-            <div flex flex-order="1">Column B: flex-order="1"</div>
-            <div flex flex-order="2">Column C: flex-order="2"</div>
+            <div flex flex-order="3">flex item: flex-order="3"</div>
+            <div flex flex-order="1">flex item: flex-order="1"</div>
+            <div flex flex-order="2">flex item: flex-order="2"</div>
         </div>
-        <h1>flex-padding</h1>
+        <h2>flex-padding</h2>
         <div layout="row" layout-padding>
-            <div flex flex-order="3">Column A: flex-order="3"</div>
-            <div flex flex-order="1">Column B: flex-order="1"</div>
-            <div flex flex-order="2">Column C: flex-order="2"</div>
+            <div flex flex-order="3">flex item: flex-order="3"</div>
+            <div flex flex-order="1">flex item: flex-order="1"</div>
+            <div flex flex-order="2">flex item: flex-order="2"</div>
         </div>
-        <h1>flex-fill</h1>
+        <h2>flex-fill</h2>
         <div layout="row" layout-margin layout-padding layout-fill>
-            <div flex flex-order="3">Column A: flex-order="3"</div>
-            <div flex flex-order="1">Column B: flex-order="1"</div>
-            <div flex flex-order="2">Column C: flex-order="2"</div>
+            <div flex flex-order="3">flex item: flex-order="3"</div>
+            <div flex flex-order="1">flex item: flex-order="1"</div>
+            <div flex flex-order="2">flex item: flex-order="2"</div>
         </div>
-        <h1>layout-align</h1>
+        <h2>layout-align</h2>
         <div layout="row" layout-align="center center">
-            <div flex="20">Column A:</div>
-            <div flex="20">Column B:</div>
-            <div flex="20">Column C:</div>
+            <div flex="20">flex item:</div>
+            <div flex="20">flex item:</div>
+            <div flex="20">flex item:</div>
         </div>
-        <h1>layout-align</h1>
+        <h2>layout-align</h2>
         <div layout="row" layout-align="space-between">
-            <div flex="20">Column A:</div>
-            <div flex="20">Column B:</div>
-            <div flex="20">Column C:</div>
+            <div flex="20">flex item:</div>
+            <div flex="20">flex item:</div>
+            <div flex="20">flex item:</div>
         </div>
-        <h1>hide/showとWindow Size</h1>
+        <h2>hide/showとWindow Size</h2>
         <div layout="row">
-            <div flex hide-sm>Column A:</div>
-            <div flex>Column B:</div>
-            <div flex>Column C:</div>
+            <div flex hide-sm>flex item:</div>
+            <div flex>flex item:</div>
+            <div flex>flex item:</div>
         </div>
-        <h1>Window Size × layout</h1>
+        <h2>Window Size × layout</h2>
         <div layout="row" layout-sm="column">
-            <div flex>Column A:</div>
-            <div flex>Column B:</div>
-            <div flex>Column C:</div>
+            <div flex>flex item:</div>
+            <div flex>flex item:</div>
+            <div flex>flex item:</div>
         </div>
     </div>
 </body>
