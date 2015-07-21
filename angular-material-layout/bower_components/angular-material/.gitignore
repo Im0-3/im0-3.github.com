@@ -1,0 +1,6 @@
+*.log
+*.sw*
+.DS_STORE
+/.idea/
+default-theme.css
+*/bower_components
