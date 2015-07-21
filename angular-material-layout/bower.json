@@ -1,0 +1,19 @@
+{
+  "name": "angular-material-layout",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Im0-3/im0-3.github.com",
+  "authors": [
+    "omi_yusuke <omi_yusuke@liginc.co.jp>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-material": "~0.10.0"
+  }
+}

@@ -3,4 +3,4 @@
 .DS_STORE
 /.idea/
 default-theme.css
-*/bower_components
+/angular-material-layout/bower_components
