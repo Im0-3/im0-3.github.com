@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/libs/talkie.min.css">
+    <link rel="stylesheet" href="assets/libs/talkie-default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<section layout="title" backface="background-image.jpg" backface-filter="blur(1px) brightness(.8)">
+  <h1>git-flow ハンズオン</h1>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+  <h2>git-flowって知ってますか？</h2>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>git-flowとは</h2>
+    <p>Vincent Driessen氏が'A successful Git branching model'で発表したブランチの運用やリリース管理のモデル</p>
+    <p class="fz-20">
+        -参考資料-<br>
+        <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">nvie.com - A successful Git branching model</a><br>
+        <a href="http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html" target="_blank">見えないチカラ: A successful Git branching model を翻訳しました</a>
+    </p>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>いやでも…めんどくさい…</h2>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>git-flowとは</h2>
+    <p>Vincent Driessen氏が'A successful Git branching model'で発表したブランチの運用やリリース管理のモデル</p>
+    <p class="fz-20">
+        -参考資料-<br>
+        <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">nvie.com - A successful Git branching model</a><br>
+        <a href="http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html" target="_blank">見えないチカラ: A successful Git branching model を翻訳しました</a>
+    </p>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>masterブランチ</h2>
+    <p>一番メインのブランチ</p>
+    <p>ココにはリリースされたものだけを管理する</p>
+</section>
+</script>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>developブランチ</h2>
+    <p>開発用ブランチ</p>
+    <p>masterブランチが親となる</p>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>featureブランチ</h2>
+    <p>機能開発を行うブランチ</p>
+    <p>機能単位でブランチを切る</p>
+    <p>developブランチがが親となる</p>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>releaseブランチ</h2>
+    <p>リリース前の作業を行うブランチ<br>
+    (確認・developのバグ修正・バージョンを管理)</p>
+    <p>確認ができたらmaster / developブランチにマージされる</p>
+    <p>developブランチがが親となる</p>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>hotfixブランチ</h2>
+    <p>リリース後に重大なバグが見つかった時にバグ修正などを行うブランチ</p>
+    <p>修正が完了したらmasterとdevelopにマージする。</p>
+</section>
+<section layout backface-filter="blur(1px) brightness(.8)">
+    <h2>Let's Try!</h2>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script src="assets/libs/talkie.min.js"></script>
+<script>Talkie();</script>
+</body>
+</html>
